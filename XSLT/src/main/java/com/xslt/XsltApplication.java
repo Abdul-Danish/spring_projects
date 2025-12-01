@@ -28,11 +28,4 @@ public class XsltApplication {
 		
 		System.out.println("Res " + process);
 	}
-
-	
-//	@Bean
-//	public ObjectMapper objectMapperBean(ObjectMapper objectMapper) {
-//	    objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-//	    return objectMapper;
-//	}
 }

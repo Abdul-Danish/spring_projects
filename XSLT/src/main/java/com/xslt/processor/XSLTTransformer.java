@@ -58,28 +58,16 @@ public class XSLTTransformer {
              /* 
               * Swagger inputs and transformer
               */
-//            Resource resource = resourceLoader.getResource("classpath:/json_files/" + "ghes-3.11.2022-11-28_Mod.json");
-//            Resource resource = resourceLoader.getResource("classpath:/json_files/" + "pet_store_swagger.json");
-//             this.getClass().getResourceAsStream("classpath:/yaml_files/" + "pet_store_swagger.yaml");
-//            Resource resource = resourceLoader.getResource("classpath:/json_files/" + "pet_store_swagger.json");
-//            Resource resource = resourceLoader.getResource("classpath:/practice/" + "practice2.json");
-//            JsonNode convertedJson = Run.swaggerApiPreprocess(resource);
-
-//            Source xsltSource = new StreamSource(resourceLoader.getResource("classpath:/templates/" + "swaggerApisTransformer_version_5.0.xsl").getInputStream());
-//            Source xsltSource = new StreamSource(resourceLoader.getResource("classpath:/templates/" + "jsonToXml.xsl").getInputStream());
-//            Source xsltSource = new StreamSource(resourceLoader.getResource("classpath:/practice/" + "grouping_test.xsl").getInputStream());
-            
-//            Resource resource = resourceLoader.getResource("classpath:/json_files/" + "");
-//            Source xsltSource = new StreamSource(resourceLoader.getResource("classpath:/templates/" + "").getInputStream());
-            
+            // Resource resource = resourceLoader.getResource("classpath:/json_files/" + "ghes-3.11.2022-11-28_Mod.json");
+            // Resource resource = resourceLoader.getResource("classpath:/json_files/" + "pet_store_swagger.json");
             
             /*
              * Postman inputs and transformer
              */
-            Resource resource = resourceLoader.getResource("classpath:/postman/platform_jsons/" + "DD-Foundation.postman_collection.json");
-//          Resource resource = resourceLoader.getResource("classpath:/postman/jsons/" + "petstore_postman_collection_Mod.json");
-//          Resource resource = resourceLoader.getResource("classpath:/postman/jsons/" + "Level3_Sample Collection.postman_collection.json");
-//          Resource resource = resourceLoader.getResource("classpath:/postman/jsons/" + "petstore_postman_collection_Mod.json");
+           Resource resource = resourceLoader.getResource("classpath:/postman/platform_jsons/" + "DD-Foundation.postman_collection.json");
+          // Resource resource = resourceLoader.getResource("classpath:/postman/jsons/" + "petstore_postman_collection_Mod.json");
+          // Resource resource = resourceLoader.getResource("classpath:/postman/jsons/" + "Level3_Sample Collection.postman_collection.json");
+          // Resource resource = resourceLoader.getResource("classpath:/postman/jsons/" + "petstore_postman_collection_Mod.json");
             
           JsonNode jsonNode = objectMapper.readTree(resource.getInputStream());
           JsonNode convertedJson = Run.removeNodesWithDuplicateUrl(jsonNode, jsonNode, new HashSet<>(), objectMapper);
